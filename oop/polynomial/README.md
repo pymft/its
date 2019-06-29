@@ -1,8 +1,16 @@
 # Polynomial
 
+![img](http://www.sciweavers.org/tex2img.php?eq=P%28x%29%20%3D%20a_%7Bn%7Dx%5E%7Bn%7D%2Ba_%7Bn-1%7Dx%5E%7Bn-1%7D%2B%5Cdotsb%20%2Ba_%7B2%7Dx%5E%7B2%7D%2Ba_%7B1%7Dx%2Ba_%7B0%7D%0A%0A%0A&bc=White&fc=Black&im=png&fs=18&ff=fourier&edit=0)
+
+![img](http://www.sciweavers.org/tex2img.php?eq=P%28x%29%20%3D%20%7B%5Cdisplaystyle%20%5Csum%20_%7Bk%3D0%7D%5E%7Bn%7Da_%7Bk%7Dx%5E%7Bk%7D%7D%0A&bc=White&fc=Black&im=png&fs=18&ff=fourier&edit=0)
+
 ## Part 1
 
 ### main frame
+
+![sample](http://www.sciweavers.org/tex2img.php?eq=P%28x%29%20%3D%201x%5E2%20%2B%202x%20%2B%203%0A%0A%0A%0A&bc=White&fc=Black&im=png&fs=12&ff=fourier&edit=0)
+
+![values](http://www.sciweavers.org/tex2img.php?eq=P%282%29%20%3D%201%20%5Ctimes%20%202%20%5E%202%20%2B%202%20%5Ctimes%202%20%2B%203%20%3D%2011%0A%0A%0A%0A&bc=White&fc=Black&im=png&fs=12&ff=fourier&edit=0)
 
 ```python
 >>> # create a callable object for f(x) := x^2 + 2x + 3
