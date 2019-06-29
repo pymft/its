@@ -47,8 +47,8 @@ class Polynomial:
 ```python
 >>> eq = Polynomial([8, 300, -2, 2, -3])
 >>> eq
-   4      3    2    1    0
-+8x  +300x  -2x  +2x  -3x
+...    4      3    2    1    0
+... +8x  +300x  -2x  +2x  -3x
 ```
 
 ### solution 
