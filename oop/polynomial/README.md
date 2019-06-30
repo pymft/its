@@ -78,6 +78,9 @@ class Polynomial:
 >>> f2 = Polynomial([1, 1, 2, 1])
 >>> f3 = f2 - f1
 >>> f3.coefficients
-(1, 0, 2, 0,)
+(1, 2, 2, 2)
+>>> f4 = f1 + f2
+>>> f4.coefficients
+(1, 0, 2, 0)
 ```
 
