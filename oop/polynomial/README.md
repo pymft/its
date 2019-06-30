@@ -84,3 +84,26 @@ class Polynomial:
 (1, 0, 2, 0)
 ```
 
+### solution 
+```python
+class Polynomial:
+    # ...
+    # Part 1
+    # ...
+    # Part 2
+    # ... 
+    def __neg__(self):
+        return Polynomial([-a for a in self.coefficients])
+
+    def __add__(self, other):
+        if self.degree < other.degree:
+            return other + self
+        
+        order_diff = self.degree - other.degree
+
+        coef_other = (0, )*order_diff  + other.coefficients 
+        return Polynomial([a - b for a, b in zip(self.coefficients, coef_other)])
+
+    def __sub__(self, other):
+        return self + (-other)    
+```
