@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BMI</title>
 </head>
+
 <body>
-    <h1>{{ result }}</h1>
+    
+    <h1>{{ name }} | {{ result }}</h1>
     <form method="POST">
         <table>
+            <tr>
+                <td>Your Name</td>
+                <td><input name="name"></td>
+            </tr>
             <tr>
                 <td>Weight</td>
                 <td><input name="weight"></td>
@@ -26,4 +33,5 @@
         </table>
     </form>
 </body>
+
 </html>
