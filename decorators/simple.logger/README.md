@@ -83,3 +83,40 @@ def logme_part_two(filename):
         return inner
     return decorator
 ```
+
+
+## Part 3: 
+
+same as part 2, written in classes
+
+### usage 
+
+```python
+import logme
+
+logtemp = logme.LogMeClass('logs_again.csv')
+
+@logtemp
+def mymul(a, b):
+    return a * b 
+```
+
+### solution 
+
+```python
+class LogMeClass:
+    def __init__(self, filename):
+        self.__filename = filename
+
+    def __call__(self, fn):
+        def inner(*args, **kwargs):
+            res = fn(*args, **kwargs)
+
+            log_str = f'"{time.time()}","{fn.__name__}","{args}","{kwargs}","{res}"\n'
+            f = open(self.__filename, mode='a')
+            f.write(log_str)
+            f.close()
+
+        return inner
+
+```

@@ -9,6 +9,12 @@ def mysum(a, b):
 def mysub(a, b):
     return a - b
 
+logtemp = logme.LogMeClass('logs_again.csv')
+
+@logtemp
+def mymul(a, b):
+    return a * b 
+
 if __name__ == '__main__':
-    mysub(9, 2)
-    mysub(50, 20)
+    mymul(9, 2)
+    mymul(50, 20)
