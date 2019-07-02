@@ -12,7 +12,6 @@ decorating `mysum()` function:
 ```python
 import logme 
 
-
 @logme.logme_part_one
 def mysum(a, b):
     return a + b
@@ -34,3 +33,20 @@ after calling `mysum` twice, out `logs.csv` will look like this sample file:
 "1562093825.3916304","mysum","(10, 20,)","{}","30"
 ```
 
+### solution 
+
+```python
+import time 
+
+def logme_part_one(fn):
+    def inner(*args, **kwargs):
+        res = fn(*args, **kwargs)
+
+        log_str = f'"{time.time()}","{fn.__name__}","{args}","{kwargs}","{res}"\n'
+        f = open('logs.csv', mode='a')
+        f.write(log_str)
+        f.close()
+
+        return res
+    return inner
+```
