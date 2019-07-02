@@ -50,3 +50,36 @@ def logme_part_one(fn):
         return res
     return inner
 ```
+
+
+## Part 2: set logfile's name
+
+use funtions.
+
+### usage 
+
+```python
+import logme 
+
+@logme.logme_part_two('logs_new.csv')
+def mysub(a, b):
+    return a - b
+```
+
+### solution
+
+```python
+def logme_part_two(filename):
+    def decorator(fn):
+        def inner(*args, **kwargs):
+            res = fn(*args, **kwargs)
+
+            log_str = f'"{time.time()}","{fn.__name__}","{args}","{kwargs}","{res}"\n'
+            f = open(filename, mode='a')
+            f.write(log_str)
+            f.close()
+
+            return res
+        return inner
+    return decorator
+```
